@@ -1,0 +1,1 @@
+scp ~/.ssh/id_rsa.pub <usuario>@<cliente>:%programdata%/ssh
