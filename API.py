@@ -4,8 +4,8 @@ import ipaddress
 
 grrapi = api.InitHttp(api_endpoint="http://192.168.100.100:8000",auth=("admin", "hola123.,"))
 
-def clientes_IP():
-  search_result = grrapi.SearchClients("")
+def buscarClientes(filtro=""):
+  search_result = grrapi.SearchClients(filtro)
   #result = {}
   for client in search_result:
     client_id = client.client_id
@@ -15,4 +15,4 @@ def clientes_IP():
     print (client_id, client_name, client_IPReadable, client_last_seen_at)
   sleep(30)
 
-clientes_IP()
+buscarClientes()
