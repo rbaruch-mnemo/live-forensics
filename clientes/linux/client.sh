@@ -1,6 +1,8 @@
 #!/bin/bash
 
 #Creacion de usuario y asignacion de permisos elevados
+timedatectl set-timezone America/Mexico_City
+servergrr="172.20.40.100"
 username=grragent
 string=$(cat /dev/urandom | tr -dc "[:alnum:]" | fold -w ${1:-30} | head -n 1)
 export string
@@ -10,10 +12,10 @@ echo "${username} ALL=(ALL:ALL) ALL" >> /etc/sudoers
 echo $string 
 
 #Configuracion GRR
-echo -e "192.168.100.100\tgrrserver" >> /etc/hosts
+echo -e "$servergrr\tgrrserver" >> /etc/hosts
 
 #Configuracion SSH
-apt update -y && apt install -y ssh sshpass
+apt update -y && apt install -y ssh sshpass sshfs
 sed -i '/Port 22/s/^#//g' /etc/ssh/sshd_config
 systemctl restart sshd.service
 service ssh restart
