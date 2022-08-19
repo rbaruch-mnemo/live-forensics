@@ -1,3 +1,3 @@
 # RAM DUMP Windows
-scp MRC.exe forense@192.168.100.101:"%temp%"
-ssh forense@192.168.100.101 "%temp%\MRC.exe /accepteula /silent /go %temp%\windowsRamDump.raw && scp %temp%\*.raw forense@grrserver:/home/forense/"
+echo "hola123.," | sshpass scp MRC.exe grragent@192.168.100.101:"%temp%"
+echo "hola123.," | sshpass ssh grragent@192.168.100.101 "%temp%\MRC.exe /accepteula /silent /go %temp%\windowsRamDump.raw && scp %temp%\*.raw grr@grrserver:/home/grr/"
