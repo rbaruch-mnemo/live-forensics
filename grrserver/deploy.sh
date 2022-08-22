@@ -29,5 +29,9 @@ cd /home/$username && apt install -y ./grr-server_3.4.6-0_amd64.deb
 mkdir -p /cases/GRR_Server
 
 reboot
+
 # Reiniciar el frontend de GRR
 # sudo grr_server --component frontend
+
+# Repack clientes
+# sudo grr_config_updater repack_clients

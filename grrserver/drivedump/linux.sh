@@ -1,0 +1,1 @@
+echo "hola123.," | sshpass ssh grragent@192.168.100.20 "dd if=/media/forense/CDROM | gzip -c - | ssh"

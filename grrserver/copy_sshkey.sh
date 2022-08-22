@@ -4,4 +4,4 @@ echo "hola123.," | sshpass ssh grragent@192.168.100.101 "cd %programdata%\ssh &&
 #echo "hola123.," | sshpass ssh grragent@192.168.100.101 "cd %programdata%\ssh && type grrPubKey.pub >> administrators_authorized_keys && icacls administrators_authorized_keys /inheritance:r /grant 'Administrators:F' /grant 'SYSTEM:F'" #Tunear
 
 #Linux 
- echo "oT8kHfFvvTCM8xnKjfogBdoHrv3PDa"| sshpass ssh-copy-id -i ~/.ssh/id_rsa.pub -o StrictHostKeyChecking=no grragent@192.168.100.20
+ echo "hola123.,"| sshpass ssh-copy-id -i ~/.ssh/id_rsa.pub -o StrictHostKeyChecking=no grragent@192.168.100.20

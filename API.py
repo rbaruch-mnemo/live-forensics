@@ -2,7 +2,7 @@ from time import sleep
 from grr_api_client import api
 import ipaddress
 
-grrapi = api.InitHttp(api_endpoint="http://192.168.100.100:8000",auth=("admin", "hola123.,"))
+grrapi = api.InitHttp(api_endpoint="http://172.20.4.100:8000",auth=("admin", "hola123.,"))
 
 def buscarClientes(filtro=""):
   search_result = grrapi.SearchClients(filtro)
